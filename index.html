@@ -1067,6 +1067,51 @@ footer ul li a:hover { color: var(--gold-1); }
 @media (max-width: 760px) {
   .endorse-row { grid-template-columns: 1fr; }
 }
+
+/* ---------- Footer: Presented by ToyBox ---------- */
+.footer-presented {
+  max-width: var(--maxw);
+  margin: 0 auto 48px;
+  padding: 48px 32px 40px;
+  border-top: 1px solid rgba(228, 166, 90, 0.18);
+  border-bottom: 1px solid rgba(228, 166, 90, 0.18);
+  text-align: center;
+}
+.footer-presented-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  margin-bottom: 18px;
+}
+.footer-toybox-link {
+  display: inline-block;
+  transition: opacity 0.25s, transform 0.3s;
+}
+.footer-toybox-link:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+.tb-lockup-svg {
+  width: clamp(220px, 22vw, 320px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 24px rgba(228, 166, 90, 0.25));
+}
+.footer-presented-tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 15px;
+  color: rgba(244, 237, 227, 0.65);
+  max-width: 480px;
+  margin: 22px auto 0;
+  line-height: 1.55;
+}
 </style>
 </head>
 <body>
@@ -1896,6 +1941,38 @@ footer ul li a:hover { color: var(--gold-1); }
         <li><a href="https://facebook.com/toyboxcm" target="_blank" rel="noopener">Facebook</a></li>
       </ul>
     </div>
+  </div>
+  <div class="footer-presented">
+    <span class="footer-presented-label">Presented by</span>
+    <a href="https://www.toyboxconsulting.net" target="_blank" rel="noopener" class="footer-toybox-link" aria-label="ToyBox Consulting and Management">
+      <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ToyBox Consulting & Management" class="tb-lockup-svg">
+  <defs>
+    <linearGradient id="tbGold" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#F6E0A2"/><stop offset="0.34" stop-color="#E4A65A"/><stop offset="0.54" stop-color="#F0CB6A"/><stop offset="0.76" stop-color="#B8842F"/><stop offset="1" stop-color="#E4A65A"/>
+    </linearGradient>
+  </defs>
+  <!-- coronet (ToyBox 5-point with two horizontal rules) -->
+  <g fill="url(#tbGold)" stroke="url(#tbGold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="40" y1="32" x2="130" y2="32" stroke-width="1"/>
+    <line x1="190" y1="32" x2="280" y2="32" stroke-width="1"/>
+    <!-- 5-point coronet -->
+    <path d="M 135 38 L 142 18 L 149 30 L 160 12 L 171 30 L 178 18 L 185 38 Z" fill="none" stroke-width="1.4"/>
+    <circle cx="142" cy="18" r="1.6"/>
+    <circle cx="160" cy="12" r="2"/>
+    <circle cx="178" cy="18" r="1.6"/>
+    <line x1="135" y1="42" x2="185" y2="42" stroke-width="1"/>
+  </g>
+  <!-- TOYBOX wordmark -->
+  <text x="160" y="100" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="56" letter-spacing="6" fill="url(#tbGold)">TOYBOX</text>
+  <!-- subtitle -->
+  <text x="160" y="135" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="400" font-size="18" letter-spacing="2" fill="#C48A8B">Consulting and Management</text>
+  <!-- decorative lines -->
+  <line x1="80" y1="155" x2="140" y2="155" stroke="#B8842F" stroke-width="0.8"/>
+  <line x1="180" y1="155" x2="240" y2="155" stroke="#B8842F" stroke-width="0.8"/>
+  <circle cx="160" cy="155" r="2" fill="#E4A65A"/>
+</svg>
+    </a>
+    <p class="footer-presented-tag">A Bellevue-based creative consultancy producing meaningful gatherings rooted in the Eastside.</p>
   </div>
   <div class="footer-bottom">
     <span>© 2026 ToyBox Consulting &amp; Management</span>
