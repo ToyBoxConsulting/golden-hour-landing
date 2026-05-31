@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toyboxconsulting.github.io/golden-hour-landing/sitemap.xml
