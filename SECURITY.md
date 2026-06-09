@@ -1,18 +1,17 @@
 # Security Policy
 
-ToyBox Consulting & Management, LLC takes the security of our websites and tools seriously. This document explains how to report a vulnerability responsibly.
+Golden Hour Unboxed is a ToyBox Consulting & Management property. ToyBox takes security seriously across all our web properties. This document explains how to report a vulnerability responsibly.
 
 ## Reporting a Vulnerability
 
-If you believe you've found a security vulnerability in any ToyBox Consulting property — including:
+If you believe you've found a security vulnerability affecting:
 
-- `www.toyboxconsulting.net`
-- `www.katoyapalmer.com`
+- `goldenhourunboxed.com`
+- `www.goldenhourunboxed.com`
 - `toyboxconsulting.github.io/golden-hour-landing/`
-- The Cloudflare Worker at `toybox-tools-mail.katoya.workers.dev`
-- Any of the self-assessment tool calculators
+- Any HTML form, calculator, or embedded widget on this site
 
-**Please email us at:** **katoya@toyboxconsulting.net** (subject line: `Security Disclosure`)
+**Please email us at:** **katoya@toyboxconsulting.net** (subject line: `Security Disclosure — Golden Hour`)
 
 In your report, please include:
 
@@ -27,13 +26,12 @@ We will acknowledge receipt within **5 business days** and provide an initial as
 
 ## Scope
 
-In scope:
-- All ToyBox-operated domains and subdomains listed above
-- ToyBox-operated Cloudflare Workers and serverless endpoints
-- HTML forms, calculators, and embedded widgets we control
+**In scope:**
+- All Golden Hour Unboxed domains and subdomains listed above
+- ToyBox-operated forms, calculators, and embedded widgets on this site
 
-Out of scope:
-- Third-party services we integrate with (Brevo, Cloudflare, Calendly, Crisp, Microsoft Clarity, Albacross, Web3Forms, Vimeo) — please report those to the respective vendor.
+**Out of scope:**
+- Third-party services we integrate with (Brevo, Cloudflare, Microsoft Clarity, Google Analytics, Vimeo, Substack) — please report those to the respective vendor
 - Social engineering of ToyBox staff or contractors
 - Physical access to ToyBox infrastructure
 - Denial-of-service attacks
@@ -53,10 +51,14 @@ In exchange, we ask that you:
 - Avoid privacy violations, data destruction, or service disruption during testing
 - Test only against accounts you own or with explicit permission
 
+## Related Policies
+
+This policy mirrors the [primary ToyBox Consulting security policy](https://github.com/ToyBoxConsulting/toyboxconsulting/blob/main/SECURITY.md) for unified disclosure across all ToyBox-operated properties.
+
 ## Thanks
 
-We appreciate the security community's efforts. Thank you for helping keep ToyBox Consulting safe.
+We appreciate the security community's efforts. Thank you for helping keep Golden Hour Unboxed and the broader ToyBox ecosystem safe.
 
 ---
 
-*Policy effective: 2026-06-02 · Last updated: 2026-06-02*
+*Policy effective: 2026-06-09 · Last updated: 2026-06-09*
