@@ -1768,44 +1768,166 @@ footer ul li a:hover { color: var(--gold-1); }
       </div>
     </div>
 
-    <div class="endorse-row">
-      <!-- SplashForward (endorser + tabling partner) -->
-      <div class="endorse-mini endorse-confirmed">
-        <div class="endorse-logo-row">
-          <div class="endorse-logo-plate" style="display:flex;align-items:center;justify-content:center;padding:18px 22px;">
-            <span style="font-family: var(--sans, sans-serif); font-size: 22px; font-weight: 600; color: #1FB5E4; letter-spacing: 0.02em;">SPLASH<em style="font-style: italic; font-weight: 400;">Forward</em></span>
-          </div>
+    <style>
+      .supporters-strip {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 56px 64px;
+        margin-top: 56px;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 24px;
+      }
+      .supporter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 260px;
+        min-width: 180px;
+        flex: 0 1 220px;
+      }
+      .supporter-logo {
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        opacity: 0.95;
+      }
+      .supporter-logo img { max-height: 84px; width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25)); }
+      .supporter-logo svg { max-height: 60px; width: auto; display: block; }
+      .supporter-logo-text {
+        font-family: var(--sans);
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--gold-1);
+        display: flex;
+        align-items: baseline;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .supporter-logo-text em { font-style: italic; font-weight: 400; opacity: 0.9; }
+      .supporter-caption {
+        font-family: var(--serif);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+      }
+      .supporter-caption a {
+        font-size: 17px;
+        font-style: italic;
+        color: var(--gold-1);
+        border-bottom: 1px dotted currentColor;
+        line-height: 1.3;
+      }
+      .supporter-caption a:hover { opacity: 0.85; }
+      .supporter-sub {
+        font-size: 13px;
+        opacity: 0.7;
+        letter-spacing: 0.04em;
+        font-family: var(--sans);
+        text-transform: uppercase;
+      }
+      .supporter-person {
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.78;
+        margin-top: 6px;
+        font-family: var(--serif);
+        color: rgba(244, 237, 227, 0.85);
+      }
+    </style>
+
+    <div class="supporters-strip">
+
+      <!-- NAACP State Area Conference AOWSAC -->
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <img src="data:image/png;base64,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" alt="NAACP State Area Conference Alaska Oregon Washington">
         </div>
-        <div class="who">
-          <a href="https://splashforward.org/" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">SplashForward</a>
+        <div class="supporter-caption">
+          <a href="https://naacpaowsac.org/" target="_blank" rel="noopener">NAACP State Area Conference</a>
+          <span class="supporter-sub">Alaska · Oregon · Washington</span>
+          <span class="supporter-person">Sheley Secrest · President</span>
         </div>
       </div>
-      <div class="endorse-mini endorse-confirmed">
-        <div class="endorse-logo-row">
-          <div class="endorse-logo-plate"><img src="data:image/png;base64,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" alt="NAACP State Area Conference Alaska Oregon Washington" class="endorse-logo"></div>
+
+      <!-- Bellevue Chamber of Commerce -->
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <svg viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg" aria-label="Bellevue Chamber of Commerce">
+            <text x="0" y="32" font-family="Georgia, serif" font-style="italic" font-weight="400" font-size="34" fill="#F4EDE3">B</text>
+            <text x="28" y="32" font-family="Georgia, serif" font-weight="400" font-size="26" fill="#F4EDE3" letter-spacing="0">ellevue</text>
+            <text x="28" y="56" font-family="Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="14" fill="#F4EDE3" letter-spacing="4">CHAMBER</text>
+          </svg>
         </div>
-        <p style="font-family:var(--serif);font-style:italic;font-size:17px;">Endorsed in support of cross-cultural community programming on the Eastside.</p>
-        <div class="who">
-          <a href="https://naacpaowsac.org/" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">NAACP State Area Conference<br><span style="font-size: 0.85em; opacity: 0.85;">Alaska Oregon Washington</span></a>
-          <em>Confirmed endorser · Full statement coming soon</em>
-        </div>
-      </div>
-      <div class="endorse-mini endorse-confirmed">
-        <div class="endorse-logo-row">
-          <div class="endorse-logo-plate endorse-logo-plate-dark">
-            <svg viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg" aria-label="Bellevue Chamber of Commerce">
-              <text x="0" y="32" font-family="Georgia, serif" font-style="italic" font-weight="400" font-size="34" fill="#F4EDE3">B</text>
-              <text x="28" y="32" font-family="Georgia, serif" font-weight="400" font-size="26" fill="#F4EDE3" letter-spacing="0">ellevue</text>
-              <text x="28" y="56" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="14" fill="#F4EDE3" letter-spacing="4">CHAMBER</text>
-            </svg>
-          </div>
-        </div>
-        <p style="font-family:var(--serif);font-style:italic;font-size:17px;">Endorsed in support of Black entrepreneurship and small business on the Eastside.</p>
-        <div class="who">
-          <a href="https://www.bellevuechamber.org/" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">Bellevue Chamber of Commerce</a>
-          <em>Confirmed endorser · Full statement coming soon</em>
+        <div class="supporter-caption">
+          <a href="https://www.bellevuechamber.org/" target="_blank" rel="noopener">Bellevue Chamber of Commerce</a>
+          <span class="supporter-person">Joe Fain · President &amp; CEO</span>
         </div>
       </div>
+
+      <!-- SplashForward -->
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <span class="supporter-logo-text">SPLASH<em>Forward</em></span>
+        </div>
+        <div class="supporter-caption">
+          <a href="https://splashforward.org/" target="_blank" rel="noopener">SplashForward</a>
+          <span class="supporter-person">Susan Pappalardo · Executive Director</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== WITH GRATITUDE (Civic Champions) ========== -->
+<section class="band endorse" id="civic" style="background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(196, 138, 139, 0.10) 0%, transparent 60%), linear-gradient(180deg, var(--plum) 0%, var(--plum-deep) 100%);">
+  <div class="band-inner">
+    <div class="endorse-lead">
+      <span class="eyebrow" style="justify-content:center;">With Gratitude</span>
+      <h2 class="section-title">Civic <em>champions.</em></h2>
+      <p class="section-lede" style="margin: 0 auto;">First voices in support — public servants who saw the vision early and lent their offices to lift Black Business Month on the Eastside.</p>
+    </div>
+
+    <div class="supporters-strip">
+
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <span class="supporter-logo-text" style="font-size: 21px; flex-direction: column; align-items: center; text-align: center; line-height: 1.15;">City of<br><em>Bellevue</em></span>
+        </div>
+        <div class="supporter-caption">
+          <a href="https://bellevuewa.gov" target="_blank" rel="noopener">Deputy Mayor Dave Hamilton</a>
+          <span class="supporter-sub">City of Bellevue</span>
+        </div>
+      </div>
+
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <span class="supporter-logo-text" style="font-size: 21px; flex-direction: column; align-items: center; text-align: center; line-height: 1.15;">Bellevue<br><em>City Council</em></span>
+        </div>
+        <div class="supporter-caption">
+          <a href="https://bellevuewa.gov/city-government/city-council" target="_blank" rel="noopener">Bellevue City Council Leadership</a>
+        </div>
+      </div>
+
+      <div class="supporter-item">
+        <div class="supporter-logo">
+          <span class="supporter-logo-text" style="font-size: 21px; flex-direction: column; align-items: center; text-align: center; line-height: 1.15;">King County<br><em>Executive</em></span>
+        </div>
+        <div class="supporter-caption">
+          <a href="https://kingcounty.gov/en/legacy/elected/executive" target="_blank" rel="noopener">Office of Executive Girmay Zahilay</a>
+          <span class="supporter-sub">King County</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1856,6 +1978,7 @@ footer ul li a:hover { color: var(--gold-1); }
       <div class="tier-row tier-presenting">
         <div class="sponsor-slot filled">
           <span class="name"><a href="https://www.primosbellevue.com/" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">Primo’s Bellevue</a></span>
+          <span class="sub">Chuck · Owner</span>
           <span class="sub">1020 Bellevue Way NE · Family-owned</span>
         </div>
       </div>
