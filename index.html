@@ -1884,6 +1884,148 @@ footer ul li a:hover { color: var(--gold-1); }
   </div>
 </section>
 
+<!-- ========== STORYTELLERS (hidden — unhide when Chezik headshot lands) ========== -->
+<section class="band program" id="storytellers" style="display: none; background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(228, 166, 90, 0.10) 0%, transparent 60%), linear-gradient(180deg, var(--plum) 0%, var(--plum-deep) 100%);">
+  <style>
+    #storytellers .storyteller-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 48px auto 0;
+    }
+    #storytellers .storyteller-card {
+      background: rgba(244, 237, 227, 0.04);
+      border: 1px solid rgba(228, 166, 90, 0.20);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    #storytellers .storyteller-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, rgba(228,166,90,0.10), rgba(196,138,139,0.06));
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(228,166,90,0.20);
+    }
+    #storytellers .storyteller-photo:empty { display: none; }
+    #storytellers .storyteller-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: saturate(0.92) contrast(1.04);
+      transition: filter 0.4s ease, transform 0.5s ease;
+    }
+    #storytellers .storyteller-card:hover .storyteller-photo img { filter: saturate(1.02) contrast(1.06); transform: scale(1.02); }
+    #storytellers .storyteller-tag {
+      display: block;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-1);
+      margin-bottom: 10px;
+    }
+    #storytellers .storyteller-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--warm-sand);
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    #storytellers .storyteller-role {
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: rgba(244, 237, 227, 0.7);
+      margin-bottom: 16px;
+    }
+    #storytellers .storyteller-bio {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(244, 237, 227, 0.78);
+      margin-bottom: 18px;
+    }
+    #storytellers .storyteller-link {
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--gold-1);
+      border-bottom: 1px solid var(--gold-2);
+      font-family: var(--sans);
+      align-self: flex-start;
+    }
+    #storytellers .corsage-tradition {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 28px 32px;
+      background: rgba(244, 237, 227, 0.03);
+      border-left: 3px solid var(--gold-1);
+      border-radius: 4px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(244, 237, 227, 0.86);
+    }
+    #storytellers .corsage-tradition strong { color: var(--gold-1); font-style: normal; }
+  </style>
+
+  <div class="band-inner">
+    <div class="program-head">
+      <span class="eyebrow" style="justify-content:center;">Storytellers for the Convening</span>
+      <h2 class="section-title">The <em>voices</em> we'll gather around.</h2>
+      <div class="divider">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0 L8.5 5.5 L14 7 L8.5 8.5 L7 14 L5.5 8.5 L0 7 L5.5 5.5 Z"/></svg>
+      </div>
+      <p class="section-lede">A small circle of founders, makers, and builders we have invited to carry their stories into the evening.</p>
+    </div>
+
+    <p class="corsage-tradition">
+      Each <strong>Storyteller for the Convening</strong> wears a corsage at the event. Look for the corsage and you have found someone with a story worth a moment of your time — about how they started, what they have built, and what they are still becoming. Stories happen on a walk through the garden, in conversation in the crowd, or briefly on stage as the sun softens.
+    </p>
+
+    <div class="storyteller-grid">
+
+      <!-- Chezik Tsunoda -->
+      <div class="storyteller-card">
+        <div class="storyteller-photo"><!-- Photo goes here when Katoya receives it from Chezik --></div>
+        <span class="storyteller-tag">Storyteller · Confirmed</span>
+        <div class="storyteller-name">Chezik Tsunoda</div>
+        <div class="storyteller-role">Founder &amp; Executive Director · <a href="https://www.nomoreunder.org" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">No More Under</a></div>
+        <p class="storyteller-bio">Filmmaker, mother, and water-safety advocate. Founded No More Under after losing her three-year-old son Yori — turning unimaginable grief into a national mission that brings free swim lessons to Black and brown children, who drown at four to five times the rate of their peers. Her acclaimed documentary <em>Drowning in Silence</em> carries that work into theaters.</p>
+        <a href="https://www.cheziktsunoda.com" target="_blank" rel="noopener" class="storyteller-link">cheziktsunoda.com →</a>
+      </div>
+
+      <!-- Shomari Stone -->
+      <div class="storyteller-card">
+        <div class="storyteller-photo"></div>
+        <span class="storyteller-tag">Storyteller · Confirmed</span>
+        <div class="storyteller-name">Shomari Stone</div>
+        <div class="storyteller-role">Journalist · Eastside</div>
+        <p class="storyteller-bio">Bio + headshot incoming. Stay tuned.</p>
+      </div>
+
+      <!-- Bellevue business-owner storyteller — TBC -->
+      <div class="storyteller-card">
+        <div class="storyteller-photo"></div>
+        <span class="storyteller-tag">Storyteller · Bellevue Business Owner</span>
+        <div class="storyteller-name">A voice from the Bellevue block.</div>
+        <div class="storyteller-role">Recruitment in progress</div>
+        <p class="storyteller-bio">We're inviting two to three Black-owned Bellevue businesses to bring their founder stories into the circle. If you know someone whose story belongs in this room, send us their name.</p>
+        <a href="mailto:katoya@toyboxconsulting.net?subject=Storyteller%20Nomination" class="storyteller-link">Nominate a storyteller →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ========== VENDORS ========== -->
 <section class="band audience" id="vendors-showcase" style="display: none;"><!-- Hidden — reactivate when vendor announcements land --></section>
 
