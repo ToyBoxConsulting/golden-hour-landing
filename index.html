@@ -2366,6 +2366,29 @@ footer ul li a:hover { color: var(--gold-1); }
 })();
 </script>
 
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!-- ANALYTICS — cookieless, no consent banner needed                  -->
+<!-- Cloudflare Web Analytics: privacy-first, zero cookies             -->
+<!-- GA4 with Consent Mode v2 default-denied: anonymous pings only     -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ba69a98a544e412684903aa862464865"}'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  // Consent Mode v2 — default DENIED. Cookieless pings still record pageviews.
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-BTHYSS0HTS', { anonymize_ip: true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BTHYSS0HTS"></script>
+
 </body>
 </html>
       
