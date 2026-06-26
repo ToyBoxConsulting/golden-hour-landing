@@ -12,237 +12,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/og-image.png">
 <style>
-:root {
-  --ink: #1F1F1F;
-  --navy: #1F3A57;
-  --gold-1: #C8A951;
-  --gold-2: #7A6A3B;
-  --cream: #FBF6E8;
-  --paper: #FAF8F2;
-  --muted: #555;
-  --faint: #888;
-}
+:root { --ink:#1F1F1F; --navy:#1F3A57; --gold-1:#C8A951; --gold-2:#7A6A3B; --cream:#FBF6E8; --paper:#FAF8F2; --muted:#555; --faint:#888; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-  color: var(--ink);
-  background: var(--paper);
-}
-.serif { font-family: 'Georgia', 'Times New Roman', serif; }
-
-.nav {
-  background: var(--navy);
-  padding: 18px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav a {
-  color: var(--gold-1);
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--paper); }
+.nav { background: var(--navy); padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; }
+.nav a { color: var(--gold-1); text-decoration: none; font-weight: 600; letter-spacing: 0.04em; }
 .nav a:hover { color: var(--cream); }
-.nav .brand {
-  font-family: Georgia, serif;
-  font-style: italic;
-  color: var(--cream);
-  font-size: 20px;
-}
-
-.hero {
-  background: linear-gradient(180deg, var(--navy) 0%, #2a4767 100%);
-  color: var(--cream);
-  padding: 60px 32px 48px;
-  text-align: center;
-  border-bottom: 4px solid var(--gold-1);
-}
-.hero .tag {
-  display: inline-block;
-  padding: 6px 18px;
-  border: 1px solid var(--gold-1);
-  border-radius: 999px;
-  color: var(--gold-1);
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: 38px;
-  font-weight: 400;
-  line-height: 1.25;
-  max-width: 900px;
-  margin: 0 auto 18px;
-}
-.hero h1 em {
-  font-style: italic;
-  color: var(--gold-1);
-}
-.hero .subhead {
-  font-style: italic;
-  color: rgba(251, 246, 232, 0.85);
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 17px;
-}
-
-.container {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 56px 32px;
-}
-
-.release-meta {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-2);
-  font-weight: 700;
-  border-bottom: 1px solid rgba(200, 169, 81, 0.4);
-  padding-bottom: 12px;
-  margin-bottom: 32px;
-}
-
+.nav .brand { font-family: Georgia, serif; font-style: italic; color: var(--cream); font-size: 20px; }
+.hero { background: linear-gradient(180deg, var(--navy) 0%, #2a4767 100%); color: var(--cream); padding: 60px 32px 48px; text-align: center; border-bottom: 4px solid var(--gold-1); }
+.hero .tag { display: inline-block; padding: 6px 18px; border: 1px solid var(--gold-1); border-radius: 999px; color: var(--gold-1); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; }
+.hero h1 { font-family: Georgia, serif; font-size: 38px; font-weight: 400; line-height: 1.25; max-width: 900px; margin: 0 auto 18px; }
+.hero h1 em { font-style: italic; color: var(--gold-1); }
+.hero .subhead { font-style: italic; color: rgba(251, 246, 232, 0.85); max-width: 720px; margin: 0 auto; font-size: 17px; }
+.container { max-width: 780px; margin: 0 auto; padding: 56px 32px; }
+.release-meta { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-2); font-weight: 700; border-bottom: 1px solid rgba(200, 169, 81, 0.4); padding-bottom: 12px; margin-bottom: 32px; }
 .container p { margin-bottom: 18px; color: var(--ink); }
 .container strong { color: var(--navy); }
 .container em { font-style: italic; }
-
-.quote {
-  border-left: 6px solid var(--gold-1);
-  padding: 16px 24px;
-  margin: 32px 0;
-  font-style: italic;
-  color: var(--ink);
-  background: rgba(200, 169, 81, 0.06);
-  font-size: 19px;
-  line-height: 1.55;
-}
-.quote .attrib {
-  display: block;
-  margin-top: 14px;
-  font-style: normal;
-  font-size: 15px;
-  color: var(--muted);
-}
+.quote { border-left: 6px solid var(--gold-1); padding: 16px 24px; margin: 32px 0; font-style: italic; color: var(--ink); background: rgba(200, 169, 81, 0.06); font-size: 19px; line-height: 1.55; }
+.quote .attrib { display: block; margin-top: 14px; font-style: normal; font-size: 15px; color: var(--muted); }
 .quote .attrib strong { color: var(--navy); }
-
-.at-a-glance {
-  background: var(--cream);
-  border: 1px solid rgba(200, 169, 81, 0.3);
-  border-left: 6px solid var(--gold-1);
-  padding: 28px 32px;
-  margin: 40px 0;
-  border-radius: 4px;
-}
-.at-a-glance h2 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  color: var(--gold-2);
-  margin-bottom: 18px;
-  font-weight: 600;
-}
-.at-a-glance dl {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 10px 18px;
-}
-.at-a-glance dt {
-  font-weight: 700;
-  color: var(--navy);
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  padding-top: 3px;
-}
+.at-a-glance { background: var(--cream); border: 1px solid rgba(200, 169, 81, 0.3); border-left: 6px solid var(--gold-1); padding: 28px 32px; margin: 40px 0; border-radius: 4px; }
+.at-a-glance h2 { font-family: Georgia, serif; font-size: 22px; color: var(--gold-2); margin-bottom: 18px; font-weight: 600; }
+.at-a-glance dl { display: grid; grid-template-columns: 100px 1fr; gap: 10px 18px; }
+.at-a-glance dt { font-weight: 700; color: var(--navy); text-transform: uppercase; font-size: 13px; letter-spacing: 0.14em; padding-top: 3px; }
 .at-a-glance dd { color: var(--ink); }
 .at-a-glance a { color: var(--gold-2); border-bottom: 1px solid var(--gold-1); text-decoration: none; }
-
-.boilerplate {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 2px solid rgba(200, 169, 81, 0.3);
-}
-.boilerplate h3 {
-  font-family: Georgia, serif;
-  font-size: 18px;
-  color: var(--gold-2);
-  margin-top: 24px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.end-mark {
-  text-align: center;
-  font-weight: 700;
-  font-size: 22px;
-  color: var(--gold-2);
-  margin: 48px 0;
-  letter-spacing: 0.3em;
-}
-
-.contact {
-  background: var(--navy);
-  color: var(--cream);
-  padding: 32px;
-  border-radius: 4px;
-  margin-top: 32px;
-}
-.contact h3 {
-  color: var(--gold-1);
-  font-family: Georgia, serif;
-  font-size: 20px;
-  margin-bottom: 14px;
-}
-.contact a {
-  color: var(--gold-1);
-  border-bottom: 1px solid rgba(200, 169, 81, 0.5);
-  text-decoration: none;
-}
-
-.assets-cta {
-  background: var(--paper);
-  border: 2px dashed rgba(200, 169, 81, 0.5);
-  padding: 28px;
-  margin: 40px 0;
-  text-align: center;
-  border-radius: 4px;
-}
-.assets-cta h3 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  color: var(--navy);
-  margin-bottom: 12px;
-}
+.next-note { background: rgba(31, 58, 87, 0.04); border: 1px solid rgba(31, 58, 87, 0.15); border-left: 4px solid var(--navy); padding: 18px 24px; margin: 32px 0; border-radius: 4px; font-style: italic; color: var(--muted); }
+.next-note strong { color: var(--navy); font-style: normal; }
+.boilerplate { margin-top: 48px; padding-top: 32px; border-top: 2px solid rgba(200, 169, 81, 0.3); }
+.boilerplate h3 { font-family: Georgia, serif; font-size: 18px; color: var(--gold-2); margin-top: 24px; margin-bottom: 12px; font-weight: 600; }
+.end-mark { text-align: center; font-weight: 700; font-size: 22px; color: var(--gold-2); margin: 48px 0; letter-spacing: 0.3em; }
+.contact { background: var(--navy); color: var(--cream); padding: 32px; border-radius: 4px; margin-top: 32px; }
+.contact h3 { color: var(--gold-1); font-family: Georgia, serif; font-size: 20px; margin-bottom: 14px; }
+.contact a { color: var(--gold-1); border-bottom: 1px solid rgba(200, 169, 81, 0.5); text-decoration: none; }
+.assets-cta { background: var(--paper); border: 2px dashed rgba(200, 169, 81, 0.5); padding: 28px; margin: 40px 0; text-align: center; border-radius: 4px; }
+.assets-cta h3 { font-family: Georgia, serif; font-size: 22px; color: var(--navy); margin-bottom: 12px; }
 .assets-cta p { color: var(--muted); margin-bottom: 18px; }
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--navy);
-  color: var(--cream);
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  margin: 4px;
-  transition: all 0.2s;
-}
+.btn { display: inline-block; padding: 12px 24px; background: var(--navy); color: var(--cream); text-decoration: none; font-weight: 700; letter-spacing: 0.06em; border-radius: 4px; margin: 4px; transition: all 0.2s; }
 .btn:hover { background: var(--gold-2); }
 .btn.btn-gold { background: var(--gold-1); color: var(--navy); }
 .btn.btn-gold:hover { background: var(--gold-2); color: var(--cream); }
-
-footer {
-  background: var(--navy);
-  color: rgba(251, 246, 232, 0.7);
-  padding: 32px;
-  text-align: center;
-  margin-top: 64px;
-  font-size: 14px;
-}
+footer { background: var(--navy); color: rgba(251, 246, 232, 0.7); padding: 32px; text-align: center; margin-top: 64px; font-size: 14px; }
 footer a { color: var(--gold-1); text-decoration: none; }
 </style>
 </head>
@@ -267,7 +78,7 @@ footer a { color: var(--gold-1); text-decoration: none; }
 
 <p><em>Golden Hour Unboxed</em> is one of twenty-seven Bellevue-based organizations producing more than seventy cross-cultural events citywide in 2026 through the City of Bellevue's <strong>Cross-Cultural Center without Walls (CCCWW)</strong> — a pilot program within the City's Diversity Advantage Initiative, anchored in the <em>Diversity Advantage Plan 2025–2035</em>.</p>
 
-<p>Hosted by award-winning multimedia journalist <strong>Besa Gordon</strong>, the evening will feature a Sunset Sounds opening with <em>Lift Every Voice and Sing</em> and a libation ceremony; Storytelling Corner sessions; a <strong>Micro Speed Pitching Showcase</strong> with a $3,000 Founders Prize underwritten by <strong>Wayfinder Hub</strong>; a signature <strong>Sunset Toast</strong> aligned to the August 23 sunset; a <strong>Pack-the-Box</strong> community drive; and a closing <strong>Golden Hour Social</strong>. Catering is sponsored by <strong>Primo's Bellevue</strong>.</p>
+<p>The evening will be hosted by award-winning multimedia journalist <strong>Besa Gordon</strong> and feature live performance, storytelling from Black founders, a micro-pitching showcase, and a signature Sunset Toast aligned to the August 23 sunset. Catering is sponsored by <strong>Primo's Bellevue</strong>.</p>
 
 <div class="quote">
   "This evening exists because the City of Bellevue chose to invest in the cross-cultural infrastructure our region has needed for years — and because so many Eastside founders, families, and friends said yes when we asked them to show up. Golden Hour Unboxed is not a celebration we attend. It's a celebration we build together."
@@ -275,6 +86,10 @@ footer a { color: var(--gold-1); text-decoration: none; }
 </div>
 
 <p>The event has been endorsed by the <strong>NAACP State Area Conference (AOWSAC)</strong>, the <strong>Bellevue Chamber of Commerce</strong>, and <strong>SplashForward</strong>. <em>Golden Hour Unboxed</em> is free to attend and open to all ages.</p>
+
+<div class="next-note">
+  <strong>Full program announcement coming August 1.</strong> Marking the start of National Black Business Month, a fuller program release with the complete lineup of performers, storytellers, partners, and the pitch showcase will be issued on August 1, 2026.
+</div>
 
 <section class="at-a-glance">
   <h2>Event at a glance</h2>
@@ -314,7 +129,7 @@ footer a { color: var(--gold-1); text-decoration: none; }
     &nbsp;·&nbsp;
     <a href="https://goldenhourunboxed.com">goldenhourunboxed.com</a>
   </p>
-  <p style="margin-top: 18px; font-size: 14px; opacity: 0.85;">For the full press kit — high-resolution flyer, brand assets, headshots, additional facts, and interview availability — please email the contact above.</p>
+  <p style="margin-top: 18px; font-size: 14px; opacity: 0.85;">For the full press kit — high-resolution flyer, brand assets, headshots, and interview availability — please email the contact above. A fuller program release will follow on August 1, 2026.</p>
 </section>
 
 </main>
