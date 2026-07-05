@@ -226,6 +226,7 @@ undefined
   var CONFIG = {
     ga4MeasurementId:   'G-GVTKETZGVC',                                   // TODO when GA4 properties are created (file 04 process)
     bingUetTagId:       '00000000',                                       // TODO when UET tag retrieved
+    metaPixelId:        '2064099227797837',                                 // Golden Hour Unboxed dataset (Meta) — consent-gated under 'ads'
     clarityProjectId:   'wzu2tuzmct',                                     // ToyBox Clarity project (live)
     albacrossId:        '89849633',                                       // ToyBox Albacross workspace (live)
     cloudflareAnalyticsToken: 'ba69a98a544e412684903aa862464865',        // ToyBox CF Web Analytics (live)
@@ -316,9 +317,17 @@ undefined
   }
 
   // ===== Apply consent decisions =====
+  function loadMetaPixel() {
+    if (window.__tbMetaLoaded || !CONFIG.metaPixelId || CONFIG.metaPixelId.indexOf('0000') === 0) return;
+    window.__tbMetaLoaded = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', CONFIG.metaPixelId);
+    fbq('track', 'PageView');
+  }
+
   function applyConsent(c) {
     if (c.analytics) { if (window.gtag) gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied' }); if (window.clarity) clarity('consent'); }
-    if (c.ads)       { loadBingUET(); }
+    if (c.ads)       { loadBingUET(); loadMetaPixel(); }
     if (c.b2b)       { loadAlbacross(); }
     // No tear-down for already-loaded trackers — page reload may be needed if user withdraws.
   }
