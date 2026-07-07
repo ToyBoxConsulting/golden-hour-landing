@@ -1393,7 +1393,7 @@ footer ul li a:hover { color: var(--gold-1); }
       <a href="#program">Program</a>
       <a href="#take-the-stage">Take the Stage</a>
       <a href="#sponsors">Sponsors</a>
-      <a href="#audience" onclick="setTimeout(() => { const t = document.querySelector('[data-tab=\'press\']'); if (t) t.click(); }, 100);">Press</a>
+      <a href="#audience" onclick="setTimeout(function(){var b=Array.from(document.querySelectorAll('.audience-tab')).find(function(x){return x.dataset.tab==='press';});if(b)b.click();},400);">Press</a>
       <a href="#faq">FAQ</a>
     </div>
     <a href="#rsvp" class="nav-cta">RSVP Free</a>
@@ -2520,7 +2520,7 @@ footer ul li a:hover { color: var(--gold-1); }
         <li><a href="#program">Program</a></li>
         <li><a href="#take-the-stage">Take the Stage</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#audience" onclick="setTimeout(() => { const t = document.querySelector('[data-tab=\'press\']'); if (t) t.click(); }, 100);">Press</a></li>
+        <li><a href="#audience" onclick="setTimeout(function(){var b=Array.from(document.querySelectorAll('.audience-tab')).find(function(x){return x.dataset.tab==='press';});if(b)b.click();},400);">Press</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
