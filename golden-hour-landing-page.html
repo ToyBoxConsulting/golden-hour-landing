@@ -2518,7 +2518,9 @@ footer ul li a:hover { color: var(--gold-1); }
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#program">Program</a></li>
+        <li><a href="#take-the-stage">Take the Stage</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#audience" onclick="setTimeout(function(){var b=Array.from(document.querySelectorAll('.audience-tab')).find(function(x){return x.dataset.tab==='press';});if(b)b.click();},400);">Press</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
@@ -2545,3 +2547,25 @@ footer ul li a:hover { color: var(--gold-1); }
     <span class="footer-presented-label">Presented by</span>
     <a href="https://www.toyboxconsulting.net" target="_blank" rel="noopener" class="footer-toybox-link" aria-label="ToyBox Consulting and Management">
       <svg viewBox="0 0 320 180" xmlns
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.audience-tab');
+  var panels = document.querySelectorAll('.audience-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var target = tab.getAttribute('data-tab');
+      tabs.forEach(function(t){
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(function(p){
+        p.classList.remove('active');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      var matched = document.querySelector('.audience-panel[data-panel="' + target + '"]');
+      if (matched) matched.classList.add('active');
+    });
+  });
+})();
+</script>
