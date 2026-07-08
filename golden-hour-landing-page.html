@@ -2319,7 +2319,7 @@ footer ul li a:hover { color: var(--gold-1); }
           <img src="/girmay-zahilay.png" alt="King County Executive Girmay Zahilay" style="height: 130px; width: auto; object-fit: contain;">
         </div>
         <div class="supporter-caption">
-          <a href="https://kingcounty.gov/en/legacy/elected/executive" target="_blank" rel="noopener">Executive Girmay Zahilay</a>
+          <a href="https://kingcounty.gov/en/dept/executive/governance-leadership/king-county-executive/cabinet-leadership" target="_blank" rel="noopener">Executive Girmay Zahilay</a>
           <span class="supporter-sub">King County</span>
           <span class="supporter-person" style="margin-top: 8px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-1); font-style: normal;">Delivering the Digital Welcome</span>
         </div>
@@ -2493,6 +2493,7 @@ footer ul li a:hover { color: var(--gold-1); }
 
 <script>
 (function(){
+  // 1. Audience tab switcher
   var tabs = document.querySelectorAll('.audience-tab');
   var panels = document.querySelectorAll('.audience-panel');
   tabs.forEach(function(tab){
@@ -2502,13 +2503,22 @@ footer ul li a:hover { color: var(--gold-1); }
         t.classList.remove('active');
         t.setAttribute('aria-selected', 'false');
       });
-      panels.forEach(function(p){
-        p.classList.remove('active');
-      });
+      panels.forEach(function(p){ p.classList.remove('active'); });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
       var matched = document.querySelector('.audience-panel[data-panel="' + target + '"]');
       if (matched) matched.classList.add('active');
+    });
+  });
+
+  // 2. FAQ accordion — click .faq-q to toggle .open on parent .faq-item
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      if (!item) return;
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   });
 })();
