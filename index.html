@@ -1914,6 +1914,108 @@ footer ul li a:hover { color: var(--gold-1); }
   </div>
 </section>
 
+<!-- ========== FOLLOW THE BUILD (TikTok collection) ========== -->
+<style>
+  .tk-build{position:relative;padding:120px 32px;overflow:hidden;
+    background:radial-gradient(ellipse 60% 50% at 15% 20%, rgba(184,164,212,0.14) 0%, transparent 60%),
+               radial-gradient(ellipse 70% 60% at 90% 90%, rgba(228,166,90,0.16) 0%, transparent 65%),
+               linear-gradient(180deg, var(--plum) 0%, var(--plum-deep) 100%);}
+  .tk-inner{max-width:var(--maxw);margin:0 auto;position:relative;z-index:2;}
+  .tk-grid{display:grid;grid-template-columns:0.95fr 1.25fr;gap:72px;align-items:center;}
+  .tk-build h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,64px);
+    line-height:1.02;letter-spacing:-0.02em;margin-bottom:24px;}
+  .tk-build h2 em{font-style:italic;font-weight:300;}
+  .tk-lede{font-size:18px;line-height:1.7;color:rgba(244,237,227,0.85);margin-bottom:20px;max-width:460px;}
+  .tk-lede strong{color:var(--warm-sand);font-weight:500;}
+  .tk-count{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.18em;
+    text-transform:uppercase;color:var(--lavender);margin-bottom:32px;}
+  .tk-count .tk-dot{width:6px;height:6px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 10px var(--gold-2);}
+  .tk-handle{display:block;margin-top:18px;font-size:13px;letter-spacing:0.1em;color:rgba(244,237,227,0.55);}
+  .tk-rail{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .tk-clip{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;
+    border:1px solid rgba(228,166,90,0.28);background:linear-gradient(160deg,var(--plum-soft),var(--plum-deep));
+    display:flex;flex-direction:column;justify-content:flex-end;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1),border-color .35s,box-shadow .45s;}
+  .tk-clip::before{content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse 80% 55% at 50% 100%, rgba(228,166,90,0.42) 0%, rgba(196,138,139,0.18) 45%, transparent 75%);}
+  .tk-clip:hover{transform:translateY(-8px);border-color:var(--gold-1);box-shadow:0 18px 44px rgba(0,0,0,0.45);}
+  .tk-clip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .tk-scrim{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(31,16,35,0.88) 100%);}
+  .tk-cap{position:relative;z-index:2;padding:16px 14px;font-size:13px;line-height:1.35;font-weight:500;color:var(--warm-sand);}
+  .tk-play{position:absolute;top:12px;right:12px;z-index:2;width:30px;height:30px;border-radius:50%;
+    background:rgba(31,16,35,0.6);backdrop-filter:blur(6px);border:1px solid rgba(244,237,227,0.28);
+    display:flex;align-items:center;justify-content:center;}
+  .tk-play svg{width:11px;height:11px;color:var(--warm-sand);margin-left:1px;}
+  .tk-newest{border-color:var(--gold-1);}
+  .tk-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:9px;letter-spacing:0.16em;
+    text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:999px;
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-2));color:var(--plum-deep);}
+  .tk-more{border-style:dashed;border-color:rgba(228,166,90,0.4);align-items:center;justify-content:center;
+    text-align:center;background:rgba(244,237,227,0.03);}
+  .tk-more::before{opacity:0.35;}
+  .tk-more .tk-mi{position:relative;z-index:2;padding:20px;}
+  .tk-more .tk-n{font-family:var(--serif);font-style:italic;font-weight:300;font-size:30px;
+    color:var(--gold-1);line-height:1;margin-bottom:8px;display:block;}
+  .tk-more .tk-t{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,237,227,0.65);}
+  @media(max-width:1000px){.tk-grid{grid-template-columns:1fr;gap:48px;}.tk-lede{max-width:none;}}
+  @media(max-width:560px){.tk-rail{grid-template-columns:repeat(2,1fr);}.tk-build{padding:88px 22px;}}
+</style>
+
+<section class="tk-build" id="follow" aria-label="Follow the build on TikTok">
+  <div class="tk-inner">
+    <div class="tk-grid">
+      <div>
+        <span class="eyebrow">Follow the Build</span>
+        <h2>We&rsquo;re building this <em>in public.</em></h2>
+        <p class="tk-lede">A first-year event, a City grant, and no safety net. Every week I post what it actually takes &mdash; the yeses, the declines, the budget math, the parts nobody puts on a flyer.</p>
+        <p class="tk-lede"><strong>Follow along, and you&rsquo;ll see Golden Hour get built in real time.</strong></p>
+        <div class="tk-count"><span class="tk-dot"></span><span>Updated weekly</span></div>
+        <div>
+          <a class="btn btn-gold" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener">Watch the series <span class="arrow">&rarr;</span></a>
+          <span class="tk-handle">@katoyapalmer &middot; TikTok</span>
+        </div>
+      </div>
+      <div class="tk-rail">
+        <a class="tk-clip tk-newest" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener" aria-label="Watch: I can&rsquo;t wait to see you">
+          <span class="tk-badge">Newest</span>
+          <span class="tk-play"><svg viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><path d="M0 0l8 5-8 5z"/></svg></span>
+          <!-- <img src="/tiktok/clip-05.jpg" alt=""> -->
+          <span class="tk-scrim"></span>
+          <span class="tk-cap">I can&rsquo;t wait to see you</span>
+        </a>
+        <a class="tk-clip" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener" aria-label="Watch: How are you going to&hellip;">
+          <span class="tk-play"><svg viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><path d="M0 0l8 5-8 5z"/></svg></span>
+          <!-- <img src="/tiktok/clip-04.jpg" alt=""> -->
+          <span class="tk-scrim"></span>
+          <span class="tk-cap">How are you going to&hellip;</span>
+        </a>
+        <a class="tk-clip" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener" aria-label="Watch: I am having an event">
+          <span class="tk-play"><svg viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><path d="M0 0l8 5-8 5z"/></svg></span>
+          <!-- <img src="/tiktok/clip-03.jpg" alt=""> -->
+          <span class="tk-scrim"></span>
+          <span class="tk-cap">I am having an event</span>
+        </a>
+        <a class="tk-clip" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener" aria-label="Watch: Meanwhile, I&rsquo;ve been&hellip;">
+          <span class="tk-play"><svg viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><path d="M0 0l8 5-8 5z"/></svg></span>
+          <!-- <img src="/tiktok/clip-02.jpg" alt=""> -->
+          <span class="tk-scrim"></span>
+          <span class="tk-cap">Meanwhile, I&rsquo;ve been&hellip;</span>
+        </a>
+        <a class="tk-clip" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener" aria-label="Watch: Replying to&hellip;">
+          <span class="tk-play"><svg viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><path d="M0 0l8 5-8 5z"/></svg></span>
+          <!-- <img src="/tiktok/clip-01.jpg" alt=""> -->
+          <span class="tk-scrim"></span>
+          <span class="tk-cap">Replying to&hellip;</span>
+        </a>
+        <a class="tk-clip tk-more" href="https://www.tiktok.com/@katoyapalmer/collection/Golden%20Hour-7662225572633856798" target="_blank" rel="noopener">
+          <span class="tk-mi"><span class="tk-n">&rarr;</span><span class="tk-t">See the<br>full series</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ========== STORYTELLERS (hidden — unhide when Chezik headshot lands) ========== -->
 <section class="band program" id="storytellers" style="display: none; background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(228, 166, 90, 0.10) 0%, transparent 60%), linear-gradient(180deg, var(--plum) 0%, var(--plum-deep) 100%);">
   <style>
