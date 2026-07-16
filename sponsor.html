@@ -170,39 +170,45 @@ footer a{color:var(--gold-2);text-decoration:none;border-bottom:1px dotted curre
 
 <div class="wrap"><div class="rule"></div></div>
 
-<!-- DONATION TRACKER -->
+<!-- PROGRESS GRAPHIC (Golden Hour sun) -->
 <section class="band">
   <div class="wrap">
     <span class="eyebrow">Where we are</span>
     <h2 class="sect-title">The room is <em>filling.</em></h2>
-    <div id="ghtracker" data-raised="300" data-goal="13900" style="max-width:640px;margin:26px auto 0;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
-        <span id="tkRaised" style="font-family:var(--serif,'Fraunces',Georgia,serif);font-size:30px;font-weight:500;color:var(--gold-1);letter-spacing:-0.01em;"></span>
-        <span id="tkGoal" style="font-size:14px;opacity:.75;"></span>
-      </div>
-      <div style="height:14px;border-radius:999px;background:rgba(244,237,227,0.10);overflow:hidden;border:1px solid rgba(228,166,90,.28);">
-        <div id="tkFill" style="height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#F6E0A2,#E4A65A 60%,#B8842F);transition:width 1.1s cubic-bezier(.2,.7,.3,1);"></div>
-      </div>
-      <p style="font-size:13.5px;opacity:.72;margin-top:12px;">Updated as gifts come in. Every rung on the ladder below moves this number. To update, edit <code style="opacity:.85;">data-raised</code>.</p>
+    <div id="ghtracker" data-raised="270" data-goal="13900" style="max-width:520px;margin:28px auto 0;text-align:center;">
+      <svg viewBox="0 0 240 172" width="230" height="165" role="img" aria-label="Golden Hour progress, shown as a sun rising over the horizon" style="display:block;margin:0 auto;overflow:hidden;">
+        <defs>
+          <radialGradient id="ghsun" cx="0.5" cy="0.5" r="0.6">
+            <stop offset="0" stop-color="#F6E0A2"/><stop offset="0.62" stop-color="#E4A65A"/><stop offset="1" stop-color="#B8842F"/>
+          </radialGradient>
+          <clipPath id="ghSky"><rect x="0" y="0" width="240" height="140"/></clipPath>
+        </defs>
+        <g clip-path="url(#ghSky)">
+          <g id="ghSunGroup" transform="translate(0,88)">
+            <g id="ghRays" stroke="#E4A65A" stroke-width="3" stroke-linecap="round" opacity="0.2">
+              <line x1="120" y1="44" x2="120" y2="28"/>
+              <line x1="70" y1="96" x2="54" y2="96"/><line x1="170" y1="96" x2="186" y2="96"/>
+              <line x1="84" y1="60" x2="73" y2="49"/><line x1="156" y1="60" x2="167" y2="49"/>
+              <line x1="60" y1="76" x2="46" y2="70"/><line x1="180" y1="76" x2="194" y2="70"/>
+            </g>
+            <circle id="ghSun" cx="120" cy="96" r="44" fill="url(#ghsun)"/>
+          </g>
+        </g>
+        <line x1="18" y1="140" x2="222" y2="140" stroke="rgba(228,166,90,0.55)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p style="font-size:13.5px;opacity:.72;margin-top:20px;">Golden hour is the last warm light before dusk, the day at its most generous. With every gift the sun climbs &mdash; and when it rests full on the horizon, the evening is whole.</p>
     </div>
   </div>
 </section>
-<script>(function(){var t=document.getElementById('ghtracker');if(!t)return;var raised=+t.dataset.raised||0,goal=+t.dataset.goal||1;var pct=Math.max(0,Math.min(100,raised/goal*100));var f=function(n){return '$'+Number(n).toLocaleString('en-US');};document.getElementById('tkRaised').textContent=f(raised)+' raised';document.getElementById('tkGoal').textContent='of '+f(goal)+' — everything';setTimeout(function(){document.getElementById('tkFill').style.width=pct.toFixed(1)+'%';},250);})();</script>
-
-<!-- EQUITABLE PAY -->
+<script>(function(){var t=document.getElementById('ghtracker');if(!t)return;var raised=+t.dataset.raised||0,goal=+t.dataset.goal||1;var p=Math.max(0.04,Math.min(1,raised/goal));var g=document.getElementById('ghSunGroup'),ry=document.getElementById('ghRays');var ty=((1-p)*88).toFixed(1);setTimeout(function(){if(g){g.style.transition='transform 1.4s cubic-bezier(.2,.7,.3,1)';g.setAttribute('transform','translate(0,'+ty+')');}if(ry){ry.style.transition='opacity 1.4s ease';ry.style.opacity=(0.18+0.5*p).toFixed(2);}},250);})();</script>
+(<!-- EQUITABLE PAY -->
 <section class="band">
   <div class="wrap">
     <div class="eq">
       <span class="eyebrow">On equitable pay</span>
       <h2 class="eq-h">The people who build Black spaces should not be the ones quietly subsidizing them.</h2>
-      <p>This evening is built by Black professionals who agreed to take less than they are worth so the doors could open. That was a choice we made together. It is not a business model.</p>
-      <ul class="eq-list">
-        <li><strong>A host whose rate is $500 an hour</strong> worked the entire night for $500. She gave us a discount on a discount.</li>
-        <li><strong>An event manager worth $100 an hour</strong> is being paid $40.</li>
-        <li><strong>A photo and video team</strong> is donating their work outright.</li>
-        <li><strong>The producer</strong> is taking $5,000 for a year of work &mdash; and that is still a discount.</li>
-      </ul>
-      <p>So we are telling you the number instead of hiding it. <strong>$8,650</strong> is what it costs to pay this team closer to what they are actually worth. Every dollar past the event itself goes there, and <strong>we will publish what we paid.</strong></p>
+      <p>This evening is built by Black professionals who agreed to take far less than they are worth so the doors could open, free, to everyone. Some are working for a fraction of their rate. Some are donating their craft outright. That was a choice we made together, and we made it gladly. But a choice to absorb a loss is still a loss.</p>
+      <p>That loss comes to <strong>$8,650</strong> &mdash; the gap between what this team was paid and what their work is worth. That is what your support repays. Every dollar past the event itself goes there.</p>
     </div>
   </div>
 </section>
