@@ -343,6 +343,15 @@ a { color: inherit; text-decoration: none; }
 .btn .arrow { transition: transform 0.25s; }
 .btn:hover .arrow { transform: translateX(4px); }
 
+
+/* BBG PDF embed — desktop iframe, mobile static image fallback (PDFs don't render inline on mobile) */
+.bbg-pdf-desktop { display: block; }
+.bbg-pdf-mobile { display: none; }
+@media (max-width: 768px) {
+  .bbg-pdf-desktop { display: none !important; }
+  .bbg-pdf-mobile { display: block !important; }
+}
+
 /* Hero botanical accents */
 .hero-botanical {
   position: absolute;
@@ -1576,7 +1585,7 @@ footer ul li a:hover { color: var(--gold-1); }
           <dt>Event Mgmt</dt> <dd>Charmaine Madden</dd>
           <dt>Part of</dt>   <dd>City of Bellevue's <a href="https://bellevuewa.gov/city-government/departments/human-resources/diversity-advantage-initiative/cross-cultural-center-without-walls" target="_blank" rel="noopener">Cross-Cultural Center without Walls</a></dd>
           <dt>Held during</dt><dd>National Black Business Month (August)</dd>
-          <dt>Endorsed</dt> <dd>NAACP State Area Conference (AOWSAC) · Bellevue Chamber of Commerce · SplashForward</dd>
+          <dt>Endorsed</dt> <dd>NAACP State Area Conference (AOWSAC) · Bellevue Chamber of Commerce · SplashForward · Eastside for All</dd>
         </dl>
       </aside>
     </div>
@@ -1590,9 +1599,15 @@ footer ul li a:hover { color: var(--gold-1); }
           <span class="eyebrow">Plan Your Visit</span>
           <h2 class="section-title">Find your way <em>through the garden.</em></h2>
           <p style="margin:0 auto;">Golden Hour Unboxed is held at the <strong>Aaron Education Center</strong> inside Bellevue Botanical Garden — 12001 Main St, Bellevue, WA. Enter at the Garden Entrance by the parking lot; the Education Center is a short, accessible walk just past the entrance. Explore the full garden map and accessible routes below.</p>
+          <p style="margin:16px auto 0;background:rgba(200,169,81,0.08);border-left:3px solid var(--gold-1);padding:14px 18px;border-radius:3px;text-align:left;max-width:680px;"><strong style="color:var(--gold-1);">Come early and walk the garden.</strong> The Bellevue Botanical Garden is open to the public all afternoon — arrive whenever the light calls you, wander the pathways, and make an evening of it. The Aaron Education Center doors open at <strong>5:30 PM</strong> for check-in; program begins at 6:00 PM.</p>
         </div>
         <div style="max-width:1000px;margin:32px auto 0;border:1px solid rgba(200,169,81,0.28);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,0.08);">
-          <iframe src="https://bellevuebotanical.org/wp-content/uploads/2022/10/BBGS2022-MapGuide.pdf#page=2&toolbar=0&navpanes=0&view=FitH" title="Bellevue Botanical Garden map and guide" style="width:100%;height:540px;border:0;display:block;" loading="lazy"></iframe>
+          <!-- Desktop: inline PDF viewer -->
+          <iframe class="bbg-pdf-desktop" src="https://bellevuebotanical.org/wp-content/uploads/2022/10/BBGS2022-MapGuide.pdf#page=2&toolbar=0&navpanes=0&view=FitH" title="Bellevue Botanical Garden map and guide" style="width:100%;height:540px;border:0;display:block;" loading="lazy"></iframe>
+          <!-- Mobile fallback: static image preview (PDFs don't render inline on mobile browsers) -->
+          <a href="https://bellevuebotanical.org/wp-content/uploads/2022/10/BBGS2022-MapGuide.pdf" target="_blank" rel="noopener" class="bbg-pdf-mobile" style="display:none;">
+            <img src="/bbg-mapguide-preview.jpg" alt="Bellevue Botanical Garden map and guide — tap to open full PDF" style="width:100%;height:auto;display:block;">
+          </a>
         </div>
         <div style="text-align:center;margin-top:20px;">
           <a href="https://bellevuebotanical.org/wp-content/uploads/2022/10/BBGS2022-MapGuide.pdf" target="_blank" rel="noopener" class="btn btn-gold">Open the full garden map &amp; guide (PDF) →</a>
@@ -2415,6 +2430,20 @@ footer ul li a:hover { color: var(--gold-1); }
       </div>
     </div>
 
+    <!-- Community Sponsor -->
+    <div class="tier">
+      <div class="tier-label">
+        <span class="name">Community Sponsor</span>
+        <span class="sub">Underwriting Event Experience</span>
+      </div>
+      <div class="tier-row tier-presenting">
+        <div class="sponsor-slot filled">
+          <span class="name"><a href="https://www.symetra.com/" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">Symetra</a></span>
+          <span class="sub">Championed by Beth Osborne</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Event Caterer -->
     <div class="tier">
       <div class="tier-label">
@@ -2498,7 +2527,7 @@ footer ul li a:hover { color: var(--gold-1); }
         </div>
       </div>
       <div style="max-width:720px;margin:22px auto 0;padding:0 8px;">
-        <p style="font-size:14px;line-height:1.7;opacity:.82;margin:0;text-align:center;">Eastside for All is our fiscal sponsor. An East King County organization led by and for Black and brown community members, they organize for a safe, welcoming, and just Eastside. They receive, receipt, and safeguard every charitable gift made to Golden Hour Unboxed. <a href="https://eastsideforall.org/" target="_blank" rel="noopener" style="color:var(--gold-2);border-bottom:1px solid rgba(228,166,90,.4);">eastsideforall.org</a></p>
+        <p style="font-size:14px;line-height:1.7;opacity:.82;margin:0;text-align:center;">Eastside for All (a DBA of The Alliance for a Just Society, a 501(c)(3) tax-exempt organization) serves as our fiscal sponsor. An East King County organization led by and for Black and brown community members, they organize for a safe, welcoming, and just Eastside. They receive, receipt, and safeguard every charitable gift made to Golden Hour Unboxed. <a href="https://eastsideforall.org/" target="_blank" rel="noopener" style="color:var(--gold-2);border-bottom:1px solid rgba(228,166,90,.4);">eastsideforall.org</a></p>
       </div>
     </div>
 
@@ -2543,6 +2572,11 @@ footer ul li a:hover { color: var(--gold-1); }
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">How much does it cost to attend?<span class="plus">+</span></button>
           <div class="faq-a"><div class="faq-a-inner">Golden Hour Unboxed is free to the public per our agreement with Bellevue Botanical Garden. RSVP secures your spot but does not include a charge. Please RSVP so we can plan accordingly for refreshments and seating.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I arrive early and walk the garden?<span class="plus">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes — please do! Bellevue Botanical Garden is open to the public all afternoon and is a beautiful place to wander. Arrive whenever you like, take in the pathways and plantings, and make an evening of it. The Aaron Education Center doors open at <strong>5:30 PM</strong> for Golden Hour Unboxed check-in; the program begins at 6:00 PM.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Is the event family-friendly?<span class="plus">+</span></button>
