@@ -378,6 +378,18 @@ a { color: inherit; text-decoration: none; }
   border-radius: 10px;
   align-items: center;
 }
+.kc-proc { grid-template-columns: 1fr 0.82fr; align-items: center; }
+.proclamation-doc-wrap {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.42);
+}
+.proclamation-doc { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) {
+  .kc-proc { grid-template-columns: 1fr; }
+  .kc-proc .proclamation-doc-wrap { order: -1; }
+}
 .proclamation-photo-wrap {
   border-radius: 8px;
   overflow: hidden;
@@ -2889,6 +2901,23 @@ footer ul li a:hover { color: var(--gold-1); }
     </div>
 
 
+    <!-- King County Proclamation — signed by Executive Girmay Zahilay -->
+    <div class="proclamation-moment kc-proc">
+      <div class="proclamation-copy">
+        <span class="eyebrow" style="justify-content:flex-start; margin-bottom:12px;">Proclamation Signed &middot; King County</span>
+        <blockquote class="proclamation-quote">"Black Business Month takes on particular meaning on the Eastside, where a new generation of Black founders, makers, and small business owners is reshaping the cultural and economic fabric of our communities."</blockquote>
+        <p class="proclamation-attrib">&mdash; King County Executive Girmay Zahilay, proclaiming August 2026 as <strong>Black Business Month</strong> and recognizing <strong>Black Entrepreneurship on the Eastside</strong>. The proclamation will be read at Golden Hour Unboxed by Angela Phan, East County Relations Manager, King County Executive Office.</p>
+        <div class="proclamation-ctas">
+          <a href="/king-county-proclamation-black-business-month-2026.pdf" target="_blank" rel="noopener" class="btn btn-gold">Read the full proclamation <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="proclamation-doc-wrap">
+        <a href="/king-county-proclamation-black-business-month-2026.pdf" target="_blank" rel="noopener" aria-label="Read the King County proclamation">
+          <img src="/king-county-proclamation-preview.png" alt="King County proclamation declaring August 2026 Black Business Month and recognizing Black Entrepreneurship on the Eastside, signed by Executive Girmay Zahilay" class="proclamation-doc" loading="lazy">
+        </a>
+      </div>
+    </div>
+
     <div class="supporters-strip">
 
       <div class="supporter-item">
@@ -2917,7 +2946,7 @@ footer ul li a:hover { color: var(--gold-1); }
         <div class="supporter-caption">
           <a href="https://kingcounty.gov/en/dept/executive/governance-leadership/king-county-executive/cabinet-leadership" target="_blank" rel="noopener">Executive Girmay Zahilay</a>
           <span class="supporter-sub">King County</span>
-          <span class="supporter-person" style="margin-top: 8px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-1); font-style: normal;">Delivering the Digital Welcome</span>
+          <span class="supporter-person" style="margin-top: 8px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-1); font-style: normal;">Digital Welcome &amp; Signed Proclamation</span>
         </div>
       </div>
 
