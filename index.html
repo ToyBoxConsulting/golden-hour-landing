@@ -1964,6 +1964,16 @@ footer ul li a:hover { color: var(--gold-1); }
   .rec-dots i{width:7px;height:7px;border-radius:50%;background:rgba(244,237,227,.25);transition:background .3s}
   .rec-dots i.on{background:var(--gold-1)}
   .rec-car.empty{display:none}
+  .rec-videocard{display:flex;gap:16px;align-items:center;margin-top:14px;padding:10px;border:1px solid rgba(228,166,90,.28);border-radius:10px;background:rgba(244,237,227,.03);text-decoration:none;border-bottom:1px solid rgba(228,166,90,.28)!important;transition:border-color .3s,background .3s}
+  .rec-videocard:hover{border-color:rgba(228,166,90,.6);background:rgba(244,237,227,.06)}
+  .rec-vcthumb{position:relative;flex:0 0 200px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:rgba(31,16,35,.6)}
+  .rec-videocard.nothumb .rec-vcthumb{display:none}
+  .rec-vcthumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .rec-vcplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#F6E0A2;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .rec-vctext{display:flex;flex-direction:column;gap:6px}
+  .rec-vctext b{font-family:var(--serif);font-weight:400;font-size:16.5px;line-height:1.35;color:var(--warm-sand)}
+  .rec-vctext i{font-style:normal;font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-1)}
+  @media (max-width:640px){.rec-videocard{flex-direction:column;align-items:stretch}.rec-vcthumb{flex-basis:auto}}
   #gallery{display:none}
   #exec-welcome{display:none}
   .rec-credit{max-width:760px;margin:26px auto 0;text-align:center;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,237,227,.55)}
@@ -3186,7 +3196,7 @@ footer ul li a:hover { color: var(--gold-1); }
       <p class="section-lede">What was written, signed and said about the night. Media inquiries: <a href="mailto:katoya@toyboxconsulting.net?subject=Media%20Inquiry%20-%20Golden%20Hour" style="color:var(--gold-1);border-bottom:1px solid var(--gold-2);">katoya@toyboxconsulting.net</a>.</p>
     </div>
     <ul class="rec-press">
-      <li><span class="k">Converge Media</span><span class="v">Covered the event on camera and hosted Katoya live on the show ahead of it. Deaunte Dampier plugged the event on his Converge show, <em>We Live in Color</em>. Their video recap is out: <em>Golden Hour Unboxed: Cultivating Black Entrepreneurship in Bellevue</em>. <a href="https://www.whereweconverge.com/video/v/golden-hour-unboxed-cultivating-black-entrepreneurship-in-bellevue" target="_blank" rel="noopener">Watch it on Converge Media →</a></span></li>
+      <li><span class="k">Converge Media</span><span class="v">Covered the event on camera and hosted Katoya live on the show ahead of it. Deaunte Dampier plugged the event on his Converge show, <em>We Live in Color</em>.<a class="rec-videocard" href="https://www.whereweconverge.com/video/v/golden-hour-unboxed-cultivating-black-entrepreneurship-in-bellevue" target="_blank" rel="noopener"><span class="rec-vcthumb"><img src="https://static1.squarespace.com/static/5ee30ba9e4ae195e50acdd2c/65e0512ffc8afc6d5d53e8e5/6a9dc138884c02093c0ec31b/1788793260942/Screenshot+2026-09-06+at+12.12.36%E2%80%AFPM.png?format=1000w" alt="Golden Hour Unboxed: Cultivating Black Entrepreneurship in Bellevue — Converge Media" loading="lazy" onerror="this.closest('.rec-videocard').classList.add('nothumb')"><span class="rec-vcplay" aria-hidden="true">&#9654;</span></span><span class="rec-vctext"><b>Golden Hour Unboxed: Cultivating Black Entrepreneurship in Bellevue</b><i>Watch the recap on Converge Media &rarr;</i></span></a></span></li>
       <li><span class="k">Northwest Newsradio</span><span class="v">Host Aaron Wright interviewed Katoya on air Saturday, August 22, 2026 — the day before the event. A listener heard it in the car, found the event, and wrote to us afterward.</span></li>
       <li><span class="k">King County</span><span class="v">Proclamation declaring August 2026 Black Business Month and recognizing Black Entrepreneurship on the Eastside, signed by Executive Girmay Zahilay. <a href="/king-county-proclamation-black-business-month-2026.pdf" target="_blank" rel="noopener">Read the proclamation →</a></span></li>
       <li><span class="k">City of Bellevue</span><span class="v">Proclamation declaring August 2026 Black Business Month, conferred at Bellevue City Council on August 4, 2026. <a href="https://bellevuewa.gov/events/golden-hour-unboxed" target="_blank" rel="noopener">City events listing →</a></span></li>
