@@ -3,3 +3,9 @@
 # (like assetlinks.json, apple-app-site-association) are served.
 include:
   - ".well-known"
+
+# _build/ holds the page sources and the builder script. It is not served.
+# (Jekyll already skips underscore-prefixed directories; this is explicit.)
+exclude:
+  - "_build"
+  - "index.nocss.html"
