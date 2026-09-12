@@ -1,0 +1,52 @@
+<section class="band final-cta">
+  <div class="sparkle-field" aria-hidden="true">
+    <div class="sparkle" style="top:18%; left:12%; animation-delay:0.2s;"></div>
+    <div class="sparkle" style="top:38%; left:82%; animation-delay:1.0s;"></div>
+    <div class="sparkle" style="top:62%; left:24%; animation-delay:1.8s;"></div>
+    <div class="sparkle" style="top:72%; left:78%; animation-delay:2.6s;"></div>
+    <div class="sparkle" style="top:28%; left:48%; animation-delay:0.6s;"></div>
+  </div>
+  <div class="band-inner">
+    <span class="eyebrow" style="justify-content:center;">Year two</span>
+    <h2 class="section-title">See you again in the <em class="gold-foil" style="-webkit-text-fill-color: transparent;">golden light.</em></h2>
+    <p class="section-lede" style="margin: 0 auto;">Year two is in motion. Get the date first, and the vendor call the day it opens.</p>
+    <div class="hero-ctas">
+      <a href="https://ee4a3130.sibforms.com/serve/MUIFABUzAxbPDJ64KutIUCwq_ZSi9BDEAmJGsGjuZE_tSJZcJPBmOdNtK80YZTRWZPPk8vhT3qJwY7bOy25aQWk-KmeNSbHSI_XdNg5z9xepGSjKRC7wBM6RUcpw69BXwLrfbko1xXaVh3lCcRCKiVNxpFE6xcl8LD-Cyr53TiQC-hn38agb2vYTCkF0pbleuc3TkL4cMyUgmEkj9A==" target="_blank" rel="noopener" class="btn btn-gold">Get year-two updates <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+
+<script>
+(function(){
+  // 1. Audience tab switcher
+  var tabs = document.querySelectorAll('.audience-tab');
+  var panels = document.querySelectorAll('.audience-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var target = tab.getAttribute('data-tab');
+      tabs.forEach(function(t){
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      var matched = document.querySelector('.audience-panel[data-panel="' + target + '"]');
+      if (matched) matched.classList.add('active');
+    });
+  });
+
+  // 2. FAQ accordion — click .faq-q to toggle .open on parent .faq-item
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      if (!item) return;
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+})();
+</script>
