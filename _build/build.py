@@ -119,7 +119,7 @@ FOOTER = f"""<footer>
     </a>
   </div>
   <div class="footer-legal">
-    <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/cookies">Cookie notice</a>
+    <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/cookies">Cookie notice</a> · <a href="#" onclick="if(window.toyboxCookieSettings){toyboxCookieSettings();}return false;">Cookie settings</a>
     <span style="opacity:.5">&nbsp;·&nbsp; &copy; {datetime.date.today().year} ToyBox Consulting &amp; Management</span>
   </div>
 </footer>
