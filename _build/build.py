@@ -76,7 +76,7 @@ FOOTER = f"""<footer>
     <div>
       <span class="logo-img logo-footer" aria-hidden="true">{CREST}</span>
       <div class="footer-brand"><span class="gold-foil">Golden Hour</span> <em style="font-style:italic;font-weight:300;opacity:0.7;">Unboxed</em></div>
-      <p class="footer-tag">A free, cross-cultural celebration of Black entrepreneurship on the Eastside, held August&nbsp;23,&nbsp;2026 during National Black Business Month. Year two is in motion. Presented by ToyBox Consulting &amp; Management as part of the City of Bellevue's <a href="https://bellevuewa.gov/city-government/departments/human-resources/diversity-advantage-initiative/cross-cultural-center-without-walls" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">Cross-Cultural Center without Walls</a>.</p>
+      <p class="footer-tag">A cross-cultural celebration of Black entrepreneurship on the Eastside, held August&nbsp;23,&nbsp;2026 during National Black Business Month. Presented by ToyBox Consulting &amp; Management as part of the City of Bellevue's <a href="https://bellevuewa.gov/city-government/departments/human-resources/diversity-advantage-initiative/cross-cultural-center-without-walls" target="_blank" rel="noopener" style="color: inherit; border-bottom: 1px dotted currentColor;">Cross-Cultural Center without Walls</a>.</p>
     </div>
     <div>
       <h4>The 2026 record</h4>
