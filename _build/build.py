@@ -119,7 +119,7 @@ FOOTER = f"""<footer>
     </a>
   </div>
   <div class="footer-legal">
-    <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/cookies">Cookie notice</a> · <a href="#" onclick="if(window.toyboxCookieSettings){toyboxCookieSettings();}return false;">Cookie settings</a>
+    <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/cookies">Cookie notice</a> · <a href="#" onclick="if(window.toyboxCookieSettings){{toyboxCookieSettings();}}return false;">Cookie settings</a>
     <span style="opacity:.5">&nbsp;·&nbsp; &copy; {datetime.date.today().year} ToyBox Consulting &amp; Management</span>
   </div>
 </footer>
@@ -165,7 +165,7 @@ def intro(eyebrow, h1, lede):
 """
 
 def write(name, html):
-    with open(os.path.join(ROOT, name), "w", encoding="utf-8") as f:
+    with open(os.path.join(ROOT, name), "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
     print(f"  {name:16} {len(html.encode()):>9,} bytes")
 
@@ -185,7 +185,7 @@ def build_home():
       </a>
       <a class="route" href="/thanks">
         <h3>Thank you</h3>
-        <p>The sponsors, partners, volunteers and civic champions who made a free evening free &mdash; and what people said afterward, unprompted.</p>
+        <p>The sponsors, partners, volunteers and civic champions who made the evening possible, and what people said afterward, unprompted.</p>
         <span class="arrow">See who made it &rarr;</span>
       </a>
       <a class="route" href="/press">
@@ -201,9 +201,9 @@ def build_home():
 <section class="band" style="text-align:center">
   <div class="band-inner">
     <span class="drive-badge">Behind the evening</span>
-    <h3>How a free event actually gets funded.</h3>
+    <h3>How a community event actually gets funded.</h3>
     <p style="max-width:600px;margin:0 auto 6px">Katoya writes about the work underneath &mdash; the budget, the licensing, the asks that landed and the ones that did not &mdash; on Substack.</p>
-    <p style="max-width:600px;margin:0 auto 26px;font-size:15px;opacity:.8">Plus what year two looks like, as it is being built.</p>
+    <p style="max-width:600px;margin:0 auto 26px;font-size:15px;opacity:.8">Plus what it takes to build an evening like this one.</p>
     <a href="{SUBSTACK}" target="_blank" rel="noopener" class="btn btn-gold">Read on Substack <span class="arrow">&rarr;</span></a>
   </div>
 </section>
@@ -219,7 +219,7 @@ def build_home():
     ])
     return head(
         "Golden Hour Unboxed 2026 — The Record · Bellevue Botanical Garden",
-        "The record of Golden Hour Unboxed 2026: a free evening of Black entrepreneurship at "
+        "The record of Golden Hour Unboxed 2026: an evening of Black entrepreneurship at "
         "Bellevue Botanical Garden, held during National Black Business Month. The night, the "
         "program, the pictures.",
         "/", extra=FAQ_LD) + body + FOOTER + "</body>\n</html>\n"
@@ -253,7 +253,7 @@ def build_thanks():
         nav("thanks"),
         intro("Thank you",
               "Paid for, staffed, and <em>vouched for.</em>",
-              "A free evening reaches people because someone covered it, someone ran it, and "
+              "An evening like this reaches people because someone covered it, someone ran it, and "
               "someone put their name on it. This page is the receipt."),
         '<main>\n',
         part("words"), part("sponsors"), part("behind"), part("who-made-it"),
@@ -295,8 +295,7 @@ FAQ_LD = """<script type="application/ld+json">
  "url":"https://www.toyboxconsulting.net"},
 "image":"https://goldenhourunboxed.com/og-image.png",
 "url":"https://goldenhourunboxed.com/",
-"isAccessibleForFree":true,
-"description":"A free, cross-cultural celebration of Black entrepreneurship on the Eastside, held during National Black Business Month at Bellevue Botanical Garden."}
+"description":"A cross-cultural celebration of Black entrepreneurship on the Eastside, held during National Black Business Month at Bellevue Botanical Garden."}
 </script>
 """
 
